@@ -56,6 +56,20 @@ public class DoublyLinkedListMain {
 		dlist.swapElementsPairwise();
 		System.out.println("Swapped elements pairwise:-");
 		dlist.displayListFirst();
+
+		DoublyLinkedList dlist_alternate=new DoublyLinkedList();
+	
+		dlist_alternate.insertFirst(8);
+		dlist_alternate.insertFirst(7);
+		dlist_alternate.insertFirst(6);
+		dlist_alternate.insertFirst(5);
+		dlist_alternate.insertFirst(4);
+		dlist_alternate.insertFirst(3);
+		dlist_alternate.insertFirst(2);
+		dlist_alternate.insertFirst(1);
+		dlist_alternate.displayListFirst();
+		dlist_alternate.deleteMnodesAfterNnodes(2,2);
+		dlist_alternate.displayListFirst();
 		
 	}
 

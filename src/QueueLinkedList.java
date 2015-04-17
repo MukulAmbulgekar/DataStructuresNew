@@ -1,4 +1,5 @@
 
+
 public class QueueLinkedList {
 	
 	Node first,last;

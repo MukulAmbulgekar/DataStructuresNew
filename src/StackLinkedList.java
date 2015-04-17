@@ -16,14 +16,16 @@ public class StackLinkedList {
 		}
 	}
 	
-	public void inserNode(int element){
+	public void Push(int element){
 		Node new_node=new Node(element);
 		new_node.next=first;
 		first=new_node;
 		System.out.println("Element pushed: "+element+" First is:"+ new_node.iData);
 	}
 	
-	public void deleteNode(){
+	
+	
+	public void Pop(){
 		System.out.println("Element popped is: "+first.iData);
 		first=first.next;
 		System.out.println("New First is:"+ first.iData);

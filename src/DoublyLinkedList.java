@@ -134,6 +134,27 @@ public void sortLinkedList(){
 	}
 }
 
+public void deleteMnodesAfterNnodes(int m,int n){
+	for(Node current=first;current!=null;current=current.next){
+		Node previous1=current;
+		int i=0,j=1;
+		while(i<n&& current.next!=null){
+			 previous1=current;
+			current=current.next;
+			i++;
+		}
+		System.out.println("Previous"+previous1.iData);
+		while(j<m && current.next!=null){
+			current=current.next;
+			j++;
+		}
+		System.out.println("Current"+current.iData);
+		if(i==n){
+		previous1.next=current.next;
+		}
+	}
+}
+
 public void reverseLinkedList(){
 	Node head=first;
 	Node second=head.next;

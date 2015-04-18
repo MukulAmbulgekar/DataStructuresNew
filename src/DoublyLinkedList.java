@@ -1,3 +1,5 @@
+import java.util.*;
+
 
 public class DoublyLinkedList {
 	Node first,last;
@@ -107,7 +109,29 @@ public void deleteLast(){
 	}
 	}
 
-
+public void removeDuplicates(){
+	Node current1,current2;
+	current1=first;
+	Node previous1=null;;
+	while(current1!=null){
+		current2=current1.next;
+		previous1=current2;
+		while(current2!=null){
+			
+			if(current1.iData==current2.iData){
+				
+				previous1.next=current2.next.next;
+			}
+		
+				previous1=current2;
+			current2=current2.next;
+			
+			
+			
+		}
+		current1=current1.next;
+	}
+}
 
 
 public void sortLinkedList(){

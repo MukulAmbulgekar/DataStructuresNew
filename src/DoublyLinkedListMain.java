@@ -3,6 +3,7 @@ public class DoublyLinkedListMain {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		CircularLinkedList clist=new CircularLinkedList();
 		DoublyLinkedList dlist=new DoublyLinkedList();
 		DoublyLinkedList dlist1=new DoublyLinkedList();
 		dlist.deleteLast();
@@ -71,6 +72,26 @@ public class DoublyLinkedListMain {
 		dlist_alternate.deleteMnodesAfterNnodes(2,2);
 		dlist_alternate.displayListFirst();
 		
+		DoublyLinkedList dlist_duplicate=new DoublyLinkedList();
+		dlist_duplicate.insertFirst(1);
+		dlist_duplicate.insertFirst(3);
+		dlist_duplicate.insertFirst(3);
+		dlist_duplicate.insertFirst(3);
+		dlist_duplicate.insertFirst(3);
+		dlist_duplicate.insertFirst(2);
+		dlist_duplicate.displayListFirst();
+		dlist_duplicate.removeDuplicates();
+		System.out.println("After removing duplicates:-");
+		dlist_duplicate.displayListFirst();
+		
+		clist.insertNode(25);
+		clist.insertNode(15);
+		clist.insertNode(35);
+	
+		
+		clist.displayCircularList();
+		clist.findLoopCircularLinkedList();
+		System.out.println(clist.hasLoop());
 	}
 
 }

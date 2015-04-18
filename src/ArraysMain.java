@@ -1,3 +1,5 @@
+import java.util.Iterator;
+
 
 public class ArraysMain {
 
@@ -7,6 +9,7 @@ public class ArraysMain {
 		int [] inputArray={7,8,9,0,1,2,3,4,5,6};  // Sorted Rotated Array
 		int [] inputArray1={0,1,2,3,4,5,6,7,8,9};  // Sorted Rotated Array
 		int [] inputArray2={4, 2, 1, 3, 4, 1};  
+		int [] inputArray3={5,5,5,4,4,3,2,1};
 		
 		System.out.println("Rotated Array");
 		ArraysProblems a=new ArraysProblems();
@@ -37,6 +40,12 @@ public class ArraysMain {
 	
 	System.out.println("\nNumber of occurances for 1:-"+a.countOccurances(inputArray2, 1));
 	a.printFirstRepeating(inputArray2);
+	Iterator<Integer> i=a.removeDuplicates(inputArray2).iterator();
+	System.out.println("\nUnique Elements in array using ArrayList");
+	while(i.hasNext()){
+		System.out.print(i.next()+"\t");
+	}
+	a.removeDuplicates1(inputArray3);
 	}
 	
 

@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class ArraysProblems {
 
@@ -142,5 +144,48 @@ public class ArraysProblems {
         else
           System.out.println("There are no repeating elements");
     }
+	
+	public void removeDuplicates1 (int a[]){
+		
+		
+		for(int i=0;i<a.length;i++){
+			for (int j=i;j+1<a.length;j++){
+				if(a[i]==a[j+1]){
+					a[j+1]=-1;
+				}
+				
+			}
+		}
+		System.out.println("\nUnique Elements in array using O(n2)");
+		for(int j: a){
+			if(j!=-1)
+			System.out.print(j+"\t");
+			
+		}
+		
+	}
+	
+	// Remove duplicates Using external ArrayList and O(n)
+	public ArrayList <Integer> removeDuplicates(int a[]){
+		ArrayList <Integer> unique=new ArrayList<Integer>();
+		HashSet <Integer> unique1=new HashSet<Integer>();
+		for (int i=0;i<a.length;i++){
+			unique1.add(a[i]);
+		}
+		for (int i=0;i<a.length;i++){
+			if(!unique.contains(a[i])){
+				unique.add(a[i]);
+			}
+			else{
+				continue;
+			}
+		}
+		Iterator <Integer> it=unique1.iterator();
+		System.out.println("Unique Elements in array using HashSets(Sorted by Default)");
+		while(it.hasNext()){
+			System.out.print(it.next()+"\t");
+		}
+		return unique;
+	}
 
 }
